@@ -116,6 +116,7 @@ address {
   display: flex;
   margin-left: auto;
   align-items: center;
+  /* outline: 1px solid black; */
 }
 
 .header-nav {
@@ -462,12 +463,18 @@ address {
 .regular-customer-list {
   display: flex;
 }
+
 .regular-customer-item {
+  width: 170px;
+  height: 90px;
+}
+
+.regular-customer-item-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
   border: 1px solid var(--icon-basic-color);
   border-radius: 4px;
 }
@@ -480,12 +487,12 @@ address {
   fill: var(--icon-basic-color);
 }
 
-.regular-customer-item:hover .customer-list-icon,
-.regular-customer-item:focus .customer-list-icon {
+.regular-customer-item-link:hover .customer-list-icon,
+.regular-customer-item-link:focus .customer-list-icon {
   fill: var(--accent-text-color);
 }
-.regular-customer-item:hover,
-.regular-customer-item:focus {
+.regular-customer-item-link:hover,
+.regular-customer-item-link:focus {
   border: 1px solid var(--accent-text-color);
 }
 
@@ -594,7 +601,7 @@ address {
   border: transparent;
   border-radius: 4px;
 
-  background-color: var(--paragraph-text-color);
+  background-color: var(--secondary-background-color);
 
   font-family: inherit;
   letter-spacing: var(--letter-spacing);
