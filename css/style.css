@@ -5,6 +5,7 @@
   --accent-text-color: #2196f3;
   --title-text-color: #212121;
   --paragraph-text-color: #757575;
+  --icon-basic-color: #afb1b8;
 
   --primary-fonts: Roboto, sans-serif;
   --secondary-fonts: Raleway, cursive;
@@ -145,15 +146,23 @@ address {
 }
 
 /* полосочкаааааааааааааааааа */
+.header-link.current {
+  position: relative;
+  padding-bottom: 32px;
+}
 
-/* .current::after {
+.header-link.current::after {
   content: "";
-  width: 48px;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   height: 4px;
   display: block;
-  margin: 28px auto 0;
+  border-radius: 2px;
   background-color: var(--accent-text-color);
-} */
+}
 
 .header-contacts {
   display: flex;
@@ -206,6 +215,22 @@ address {
   background-color: var(--hero-background-color);
   padding-top: 200px;
   padding-bottom: 200px;
+}
+
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-container {
@@ -409,7 +434,7 @@ address {
 .social-list-icon {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: var(--icon-basic-color);
 }
 
 .social-link-item-link:hover .social-list-icon,
@@ -443,7 +468,7 @@ address {
   justify-content: center;
   width: 270px;
   height: 120px;
-  background-color: var(--secondary-background-color);
+  border: 1px solid var(--icon-basic-color);
   border-radius: 4px;
 }
 
@@ -452,12 +477,16 @@ address {
 }
 
 .customer-list-icon {
-  fill: #afb1b8;
+  fill: var(--icon-basic-color);
 }
 
-.customer-list-icon:hover,
-.customer-list-icon:focus {
+.regular-customer-item:hover .customer-list-icon,
+.regular-customer-item:focus .customer-list-icon {
   fill: var(--accent-text-color);
+}
+.regular-customer-item:hover,
+.regular-customer-item:focus {
+  border: 1px solid var(--accent-text-color);
 }
 
 /* ==================== END CUSTOMER ===================== */
