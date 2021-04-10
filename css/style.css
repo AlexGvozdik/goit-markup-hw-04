@@ -43,6 +43,7 @@
   font-weight: 700;
   letter-spacing: var(--letter-spacing);
 }
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -80,6 +81,10 @@ address {
   line-height: 1.2;
 }
 
+ul * {
+  outline: 1px solid tomato;
+}
+
 .logo-web {
   color: var(--accent-text-color);
 }
@@ -101,15 +106,21 @@ address {
   font-size: 14px;
   line-height: 1.71;
 }
+
 .current {
   color: var(--accent-text-color);
 }
+
 /* ==================== END UTILITIES ===================== */
 
 /* ==================== HEADER ===================== */
 .header {
+  position: absolute;
+  width: 100%;
   padding-top: 24px;
   padding-bottom: 25px;
+  left: 1px;
+  /* bottom: 2px; */
 }
 
 .header-container {
@@ -207,6 +218,7 @@ address {
 .header-contacts-link:focus {
   color: var(--accent-text-color);
 }
+
 /* ==================== END HEADER ===================== */
 
 /* ====================================================== INDEX.HTML =========================================== */
@@ -214,7 +226,7 @@ address {
 /* ==================== HERO ===================== */
 .hero {
   background-color: var(--hero-background-color);
-  padding-top: 200px;
+  padding-top: 280px;
   padding-bottom: 200px;
 }
 
@@ -223,11 +235,9 @@ address {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
+      rgba(47, 48, 58, 0.4)),
     url(../img/hero-banner.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -269,6 +279,7 @@ address {
   min-width: 200px;
   text-align: center;
 }
+
 /* ==================== END HERO ===================== */
 
 /* ==================== FEATURES ===================== */
@@ -319,6 +330,7 @@ address {
   font-size: 14px;
   line-height: 1.71;
 }
+
 /* ==================== END FEATURES ===================== */
 
 /* ==================== DUTIES ===================== */
@@ -416,9 +428,11 @@ address {
   align-items: center;
   justify-content: center;
 }
+
 .social-link-item:not(:last-child) {
   margin-right: 10px;
 }
+
 .social-link-item-link {
   display: flex;
   align-items: center;
@@ -432,6 +446,7 @@ address {
 .social-link-item-link:focus {
   background-color: var(--accent-text-color);
 }
+
 .social-list-icon {
   width: 20px;
   height: 20px;
@@ -460,6 +475,7 @@ address {
   line-height: 42px;
   letter-spacing: var(--letter-spacing);
 }
+
 .regular-customer-list {
   display: flex;
 }
@@ -491,6 +507,7 @@ address {
 .regular-customer-item-link:focus .customer-list-icon {
   fill: var(--accent-text-color);
 }
+
 .regular-customer-item-link:hover,
 .regular-customer-item-link:focus {
   border: 1px solid var(--accent-text-color);
@@ -518,7 +535,7 @@ address {
   margin-bottom: 20px;
 }
 
-.container-logo > .logo {
+.container-logo>.logo {
   color: var(--primary-background-color);
 }
 
@@ -579,11 +596,14 @@ address {
 }
 
 /* ==================== END FOOTER ===================== */
+
 /* ====================================================== PORTFOLIO.HTML ====================================== */
+
 /* ==================== PORT ===================== */
 .header.portfolio {
   border-bottom: 1px solid #ececec;
 }
+
 .port {
   background-color: var(--primary-background-color);
   padding-top: 94px;
@@ -666,4 +686,5 @@ address {
   font-size: 16px;
   line-height: 1.87;
 }
+
 /* ==================== END PORT ===================== */
